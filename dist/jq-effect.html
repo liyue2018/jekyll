@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery效果展示页面</title>
+    <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Tab选项卡</h3>
+        <div class="wrapper">
+            <ul class="my-tab list-unstyled">
+                <li class="tab-item active"><span class="glyphicon glyphicon-bell"></span>家用电器</li>
+                <li class="tab-item"><span class="glyphicon glyphicon-heart"></span>女装</li>
+                <li class="tab-item"><span class="glyphicon glyphicon-pencil"></span>母婴</li>
+                <li class="tab-item"><span class="glyphicon glyphicon-globe"></span>礼品鲜花</li>
+                <li class="tab-item"><span class="glyphicon glyphicon-film"></span>汽车用品</li>
+            </ul>
+            <div class="products clearfix">
+                <div class="product-item selected">
+                    <a href="#">
+                        <img src="images/1.png" class="img-responsive img-rounded" alt="" />
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#">
+                        <img src="images/2.png" class="img-responsive img-rounded" alt="" />
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#">
+                        <img src="images/3.png" class="img-responsive img-rounded" alt="" />
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#">
+                        <img src="images/4.png" class="img-responsive img-rounded" alt="" />
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#">
+                        <img src="images/5.png" class="img-responsive img-rounded" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container imagegallery">
+        <h3 class="title">美女相册</h3>
+        <ul class="list-unstyled small-image">
+            <li class="item">
+                <a href="images/image01.jpeg" title='美女01'>
+                    <img src="images/small-image01.jpeg" alt="" />
+                </a>
+            </li>
+            <li class="item">
+                <a href="images/image02.jpeg" title='美女02'>
+                    <img src="images/small-image02.jpeg" alt="" />
+                </a>
+            </li>
+            <li class="item">
+                <a href="images/image03.jpeg" title='美女03'>
+                    <img src="images/small-image03.jpeg" alt="" />
+                </a>
+            </li>
+            <li class="item">
+                <a href="images/image04.jpeg" title='美女04'>
+                    <img src="images/small-image04.jpeg" alt="" />
+                </a>
+            </li>
+            <li class="item">
+                <a href="images/image05.jpeg" title='美女05'>
+                    <img src="images/small-image05.jpeg" alt="" />
+                </a>
+            </li>
+        </ul>
+        <div class="large-image clearfix">
+            <img src="images/loading.gif" alt="正在加载" />
+        </div>
+        <h4 class="desc">正在加载中...</h4>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container btn-wrapper">
+        <h3 class="title">全选和反选按钮</h3>
+        <!-- <div class="select-btns">
+            <button type="button" class="btn btn-success all-btn">全选</button>
+            <button type="button" class="btn btn-default cancel-btn">取消</button>
+        </div> -->
+        <div class="select-inputs">
+            <h4>夏天最爱的水果有哪些？</h4>
+            <div class="input-item">
+                <input type="checkbox" name="checkBox" />
+                <label>苹果</label>
+            </div>
+            <div class="input-item">
+                <input type="checkbox" name="checkBox" />
+                <label>香蕉</label>
+            </div>
+            <div class="input-item">
+                <input type="checkbox" name="checkBox" />
+                <label>西瓜</label>
+            </div>
+            <div class="input-item">
+                <input type="checkbox" name="checkBox" />
+                <label>葡萄</label>
+            </div>
+            <div class="input-item">
+                <input type="checkbox" name="checkBox" />
+                <label>贵妃梨</label>
+            </div>
+        </div>
+        <p class="text-info"></p>
+        <div>
+            <table class="table table-striped select-table">
+                <caption>这是一个展示全选按钮的表单</caption>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="allChecked" /></th>
+                        <th>水果名称</th>
+                        <th>价格</th>
+                    </tr>
+                </thead>
+                <tbody class="inputCheck">
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>苹果</td>
+                        <td>5.8</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>西瓜</td>
+                        <td>6.8</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>柠檬</td>
+                        <td>7.8</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>香蕉</td>
+                        <td>8.8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<script src="assets/jquery-1.11.3/jquery.js"></script>
+<script>
+    $(function(){
+
+        //Tab选项卡
+        $('.tab-item').mouseenter(function(){
+            console.log($(this));
+            $(this).addClass('active').siblings().removeClass('active');
+            var idx = $(this).index();
+            $('.product-item').eq(idx).addClass('selected').siblings().removeClass('selected');
+        });
+
+        // 美女相册
+        $('.small-image a').on('click',function(){
+            var href = $(this).attr('href');
+            $('.large-image img').attr('src',href);
+            $('.desc').text($(this).attr('title'));
+            return false;
+        });
+
+        //全选和反选按钮
+        $('.select-btns .all-btn').on('click',function(){
+            // $('.select-inputs input').attr('checked','checked');
+            // $('.select-inputs input').attr('checked',true);
+
+            //boolean类型的属性，使用prop方法
+            $('.select-inputs input').prop('checked',true);
+        });
+        $('.select-btns .cancel-btn').on('click',function(){
+            // $('.select-inputs input').attr('checked','checked');
+            $('.select-inputs input').prop('checked',false);
+        });
+        $('input[name="checkBox"]').on('click',function(){
+            var num = $('input:checked').length;
+            $('.text-info').text(num + '种水果被选中了');
+        });
+
+        //全选表单
+        $('.allChecked').on('click',function(){
+           $('.inputCheck input').prop('checked',$(this).prop('checked'));
+        });
+
+        $('.inputCheck input').on('click',function(){
+            var checkedLength = $('.inputCheck input:checked').length;
+            var inputLength = $('.inputCheck input').length;
+            if(checkedLength == inputLength){
+                $('.allChecked').prop('checked',true);
+            }else{
+                $('.allChecked').prop('checked',false);
+            }
+        })
+    })
+</script>
+</body>
+</html>

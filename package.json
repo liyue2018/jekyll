@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/liyue2018/jekyll#readme",
   "devDependencies": {
+    "bootstrap": "^4.0.0",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -34,6 +35,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-watch-path": "^0.1.0",
+    "jquery": "^3.3.1",
     "mkdirp": "^0.5.1",
     "stream-combiner2": "^1.1.1"
   }
