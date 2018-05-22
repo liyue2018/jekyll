@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:43:53
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-13 17:55:00
+* @Last Modified time: 2018-05-21 14:16:48
 */
 
 
@@ -13,9 +13,9 @@ html {
 
 body{
     background: #f5f5f5;
-    border:{
-        top: .2rem solid #fc0;
-    }
+    // border:{
+    //     top: 6rem solid #fc0;
+    // }
     color: #333;
 }
 
@@ -49,14 +49,82 @@ body{
     }
 }
 
-a{
-    color:#fc0;
-}
+// a{
+//     color:#fc0;
+// }
 
+
+//消息弹出框
+
+.info-box{
+    display:none;
+}
+// 音乐导航
+
+.music-nav{
+    width:80%;
+    margin:0 auto;
+    overflow-y:hidden;
+    z-index:3;
+    ul{
+        margin-bottom:0;
+    }
+    .nav-item{
+        height:100%;
+        width:16%;
+        float:left;
+        text-align:center;
+        padding: 0.4rem 0;
+        background: #333;
+        border:{
+            right: 1px solid #fff;
+        }
+        position:relative;
+        a{
+            position:relative;
+            z-index:3;
+            color:#fff;
+            text-decoration:none;
+        }
+        span{
+            display:block;
+            position:absolute;
+            top: 60px;
+            background:rgb(69,137,148);;
+            width:100%;
+            height:100%;
+        }
+    }
+}
 // 京东呼吸灯
 
 .js-carousel{
     position:relative;
+    margin:{
+        top: 2rem;
+    }
+    &:hover{
+        .arrow{
+            display:block;
+        }
+    }
+    .indicators{
+        position:absolute;
+        bottom: 10%;
+        left: 50%;
+        margin-left: -4rem;
+        .item{
+            display:inline-block;
+            width:0.5rem;
+            height:0.5rem;
+            border-radius:50%;
+            background:#fff;
+            margin: 0 0.2rem;
+            &.active{
+                background:#f00;
+            }
+        }
+    }
 }
 
 .slider{
@@ -65,13 +133,7 @@ a{
     margin: 2rem auto;
     overflow:hidden;
     position:relative;
-    &:hover{
-        .arrow{
-            display:block;
-        }
-    }
     li.item{
-        display:none;
         position:absolute;
         height:100%;
         img{
@@ -87,7 +149,7 @@ a{
 // 箭头
 
 .arrow{
-    // display:none;
+    display:none;
     span.glyphicon{
         position:absolute;
         top: 50%;
@@ -105,8 +167,17 @@ a{
     }
 }
 
-.slider:hover .arrow{
-    display:block;
+// 手风琴效果
+
+.squeezebox{
+    // width: 100%;
+    // margin: 0 auto;
+    height: 200px;
+    .item{
+        width:200px;
+        height:100%;
+        float:left;
+    }
 }
 
 .main-nav {
@@ -170,6 +241,36 @@ a{
     border-radius: 4px;
 }
 
+// 手风琴效果2
+
+.parentWrap{
+    width: 100%;
+    overflow:hidden;
+    border:1px solid #ddd;
+    margin:1rem auto;
+    .menuGroup{
+        width:100%;
+        .groupTitle{
+            display:block;
+            background:#ece0ff;
+            width:100%;
+            padding: 0.3rem 0;
+            text-align:center;
+            border:{
+                bottom:2px solid #ccc;
+            }
+        }
+        .content{
+            display:none;
+            width:100%;
+            height:6rem;
+            padding:0.3rem;
+        }
+    }
+}
+.menuGroup:first-child .content{
+    display:block;
+}
 
 // tab选项卡
 .my-tab{
@@ -223,7 +324,25 @@ a{
             display:block;
         }
 }
+// 突出展示案例
 
+.exhibition-box{
+    margin:{
+        top: 2rem;;
+    }
+    li{
+        float:left;
+        height:200px;
+        border:1px solid #333;
+        padding: 0.3rem;
+        // opacity:0.2;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
 
 // 下拉菜单
 
@@ -343,22 +462,207 @@ a{
     }
 }
 
+// 城市选择
+.city-select{
+    h3{
+       margin:{
+           bottom: 1rem;
+        }
+    }
+   .src-city,.tar-city{
+    display:inline-block;
+    width::10rem;
+    height:10rem;
+    padding: 1rem;
+    text-align:center;
+   }
+   .btn-box{
+    display:inline-block;
+    vertical-align:top;
+    button{
+        display:block;
+        width: 2rem;
+        padding:0.3rem 0;
+      }
+   }
+}
+
+// 淘宝精品案例
+
+.taobao-box{
+    width:60%;
+    height:15rem;
+    overflow:hidden;
+    border: 1px solid rgb(252,157,154);
+    margin: 2rem auto;
+    .left-wrapper,.right-wrapper{
+        // width: 10%;
+        height:100%;
+        float:left;
+        padding:0;
+        line-height:3;
+        li{
+            padding:0.5rem 0;
+            height:20%;
+            text-align:center;
+            background:rgb(255,245,247);
+            border:{
+                bottom: 1px solid rgb(252,157,154);
+            }
+            &:last-child{
+                border:0;
+            }
+            a{
+                color:#333;
+                text-decoration:none;
+             }
+        }
+        li.active{
+            background:rgb(254,67,101);
+            color:#fff;
+            a{
+                color:#fff;
+            }
+        }
+    }
+    .center-wrapper{
+        float:left;
+        overflow:hidden;
+        padding:0;
+        height:100%;
+        li{
+            height:100%;
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+// 评论发布案例
+
+.comments-wrapper{
+    .comment{
+    display:block;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 4px;
+    border-color: #ccc;
+    resize:none;
+    padding: 0.3rem;
+    &:hover{
+        outline:none;
+    }
+ }
+ .send-btn{
+    margin:{
+        top:0.5rem;
+    }
+ }
+}
+
+// 弹幕效果
+.barrage{
+    height:14rem;
+    position:relative;
+    border:1px solid #ccc;
+    border-radius:4px;
+    margin:{
+        top:1rem;
+    }
+    .area{
+        width:100%;
+        position:relative;
+        height:12rem;
+        padding-bottom:2rem;
+        overflow:hidden;
+        }
+    .main-content{
+        background:#ddd;
+        text-align:center;
+        width:100%;
+        position:absolute;
+        bottom:0;
+        padding:0.3rem;
+        .title{
+            display:inline-block;
+        }
+        .barrage-text{
+            padding:0.3rem;
+            width: 20%;
+            border-radius: 3px;
+            border: 0;
+            outline:none;
+        }
+        .submit-btn{}
+    }
+}
+
+// 固定导航
+.header{
+    height:6rem;
+    overflow:hidden;
+    img{
+        width:100%;
+        height:100%;
+
+    }
+}
+
+// 回到顶部按钮
+.go-top{
+    position:fixed;
+    bottom:10%;
+    right:2%;
+    display:none;
+    .go-top-btn{
+        display:inline-block;
+        text-align:center;
+        width: 1.4rem;
+        height:1.4rem;
+        border-radius:4px;
+        border:1px solid #f1f1f1;
+        background:#fff;
+        font-size:1rem;
+        color:#ccc;
+        &:hover{
+            color:#333;
+        }
+    }
+}
 
 
+// 星际评分
 
+.stars-list{
+    li.item{
+        display:inline-block;
+        margin:0 0.2rem;
+        font-size:1rem;
+        color:#fa709a;
+    }
+}
 
+//显示不同透明度
 
+.opacity-wrapper{
+    li.item{
+        background:#fa71cd;
+        height:200px;
+        text-align:center;
+        line-height:10;
+        color:#f1f1f1;
+    }
+}
 
+//jquery.color.js
 
-
-
-
-
-
-
-
-
-
+.color_js{
+    width: 80%;
+    height: 8rem;
+    background:#f9d423;
+}
 
 
 
