@@ -1,0 +1,80 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-05-22 14:38:24
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-05-22 22:51:21
+*/
+.jk-docs-nav {
+  background: #fff;
+  margin-bottom: 0; }
+  .jk-docs-nav a {
+    color: #563d7c;
+    font-weight: 500; }
+  .jk-docs-nav .navbar-header .navbar-toggle {
+    border-color: #ddd; }
+    .jk-docs-nav .navbar-header .navbar-toggle .icon-bar {
+      background: #563d7c; }
+  .jk-docs-nav .navbar-collapse .navbar-nav li.active a:hover {
+    color: #463265;
+    background: #f9f9f9; }
+
+.jk-info-box {
+  display: none; }
+
+.jk-docs-header {
+  background: #6f5499;
+  color: #cdbfe3;
+  padding: 4rem 0; }
+  .jk-docs-header .title {
+    color: #fff; }
+
+.jk-docs-sidenav {
+  top: 3rem;
+  padding-top: 2rem; }
+  .jk-docs-sidenav li a {
+    color: #767676;
+    border-left: 2px solid #f5f5f5;
+    padding: 0.4rem 0.8rem;
+    font-weight: 700; }
+    .jk-docs-sidenav li a:hover {
+      border-left: 2px solid #ddd;
+      background: transparent;
+      color: #563d7c; }
+  .jk-docs-sidenav li.active a {
+    border-left: 2px solid #563d7c;
+    color: #563d7c; }
+
+.jk-docs-carousel {
+  position: relative;
+  margin-top: 2rem; }
+  .jk-docs-carousel:hover .arrow {
+    display: block; }
+  .jk-docs-carousel .indicators {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -4rem; }
+    .jk-docs-carousel .indicators .item {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #fff;
+      margin: 0 0.2rem; }
+      .jk-docs-carousel .indicators .item.active {
+        background: #f00; }
+
+.slider {
+  width: 100%;
+  height: 340px;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative; }
+  .slider li.item {
+    position: absolute;
+    height: 100%; }
+    .slider li.item img {
+      width: 100%;
+      height: 100%; }
+    .slider li.item:first-child {
+      display: block; }

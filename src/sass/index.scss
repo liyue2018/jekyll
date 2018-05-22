@@ -1,0 +1,142 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-05-22 14:38:24
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-05-22 22:51:21
+*/
+
+// jk-docs-nav
+
+.jk-docs-nav{
+    background:#fff;
+    margin-bottom:0;
+    a{
+        color:#563d7c;
+        font-weight:500;
+    }
+    .navbar-header{
+        .navbar-toggle{
+            border-color:#ddd;
+            .icon-bar{
+                background:#563d7c;
+            }
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            li.active{
+                a{
+                    &:hover{
+                        color:#463265;
+                        background:#f9f9f9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 消息弹出框
+.jk-info-box{
+   display:none;
+}
+
+//简短介绍
+.jk-docs-header{
+   background:#6f5499;
+   color:#cdbfe3;
+   padding:4rem 0;
+   .title{
+    color:#fff;
+   }
+}
+
+// 页面内容
+
+// jk-main-content
+
+.jk-main-content{
+    // div{
+    //     width: 500px;
+    //     height:300px;
+    //     background:pink;
+    // }
+}
+
+// jk-docs-sidenav
+
+.jk-docs-sidenav{
+    top:3rem;
+    padding:{
+        top: 2rem;
+    }
+    li{
+        a{
+            color:#767676;
+            border-left: 2px solid #f5f5f5;
+            padding: 0.4rem 0.8rem;
+            font-weight:700;
+            &:hover{
+                border-left:2px solid #ddd;
+                background:transparent;
+                color:#563d7c;
+            }
+        }
+    }
+    li.active{
+        a{
+            border-left:2px solid #563d7c;
+            color:#563d7c;
+        }
+    }
+}
+
+// 京东呼吸灯
+
+.jk-docs-carousel{
+    position:relative;
+    margin:{
+        top: 2rem;
+    }
+    &:hover{
+        .arrow{
+            display:block;
+        }
+    }
+    .indicators{
+        position:absolute;
+        bottom: 10%;
+        left: 50%;
+        margin-left: -4rem;
+        .item{
+            display:inline-block;
+            width:0.5rem;
+            height:0.5rem;
+            border-radius:50%;
+            background:#fff;
+            margin: 0 0.2rem;
+            &.active{
+                background:#f00;
+            }
+        }
+    }
+}
+
+.slider{
+    width:100%;
+    height: 340px;
+    margin: 2rem auto;
+    overflow:hidden;
+    position:relative;
+    li.item{
+        position:absolute;
+        height:100%;
+        img{
+            width:100%;
+            height:100%;
+        }
+        &:first-child{
+            display:block;
+        }
+    }
+}
