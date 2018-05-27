@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>面试项目</title>
+    <title>JavaScript</title>
     <link rel="stylesheet" href="assets/bootstrap-3.3.7-dist/css/bootstrap.css" />
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/javascript_js.css">
 </head>
 <body data-spy="scroll" data-target=".jk-docs-sidebar">
     <!-- 消息弹出框 -->
-    <div class="jk-info-box alert alert-danger">
+    <!-- <div class="jk-info-box alert alert-danger">
         <p>是的，这是为了我能找到一份心仪的工作而准备的。谢谢您为此付出的宝贵时间！</p>
-    </div>
+    </div> -->
     <!-- header start -->
     <header class="navbar navbar-static-top jk-docs-nav">
         <div class="container">
@@ -43,7 +44,7 @@
     <div class="jk-docs-header">
         <div class="container">
             <h1 class="title">关于</h1>
-            <p>基于jQuery和自定义插件制作的网页特效</p>
+            <p>基于javaScript制作的网页特效</p>
         </div>
     </div>
     <!-- page start -->
@@ -51,6 +52,58 @@
         <div class="row">
             <!-- main content start -->
             <div class="col-md-9 jk-main-content">
+                <!-- test -->
+
+                <div id="test">
+                    <button type="button" class="btn btn-default" id="btn">点击</button>
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="radio" name="sex" id="" value="man" />
+                    <input type="radio" name="sex" id="" value="women" />
+                    <select class="select">
+                        <option>请选择一个</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                    <button type="button" class="btn btn-default" id="btn_sj">随机</button>
+                </div>
+                <!-- 开关的效果 -->
+
+                <div class="light-box">
+                    <button type="button" class="btn btn-default">关灯</button>
+                    <!-- <input type="text" name="" value="关灯" /> -->
+                    <div class="light">
+                        
+                    </div>
+                </div>
+
+                <!-- 切换图片 -->
+                <div class="change-img">
+                    <input type="button" value="切换图片" class="btn btn-default" /><br />
+                    <img src="images/small-image01.jpeg" alt="" />
+                </div>
+                <!-- 动态展示列表 -->
+                <div class="jk-docs-search" id="jkSearch">
+                    <input type="text" name="" placeholder="请输入搜索关键字" class="search-box form-control" />
+                    <!-- <ul class="search-content">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                </div>
+
+
                  <!-- 呼吸灯效果的封装 -->
                 <div class="jk-docs-carousel" id="jkCarousel">
                     <div class="well">
@@ -139,27 +192,27 @@
                         <div class="products clearfix">
                             <div class="product-item selected">
                                 <a href="#">
-                                    <img class="lazy" data-original="images/1.png" class="img-responsive img-rounded" alt="" />
+                                    <img src="images/1.png" class="img-responsive img-rounded" alt="" />
                                 </a>
                             </div>
                             <div class="product-item">
                                 <a href="#">
-                                    <img class="lazy" data-original="images/2.png" class="img-responsive img-rounded" alt="" />
+                                    <img src="images/2.png" class="img-responsive img-rounded" alt="" />
                                 </a>
                             </div>
                             <div class="product-item">
                                 <a href="#">
-                                    <img class="lazy" data-original="images/3.png" class="img-responsive img-rounded" alt="" />
+                                    <img src="images/3.png" class="img-responsive img-rounded" alt="" />
                                 </a>
                             </div>
                             <div class="product-item">
                                 <a href="#">
-                                    <img class="lazy" data-original="images/4.png" class="img-responsive img-rounded" alt="" />
+                                    <img src="images/4.png" class="img-responsive img-rounded" alt="" />
                                 </a>
                             </div>
                             <div class="product-item">
                                 <a href="#">
-                                    <img class="lazy" data-original="images/5.png" class="img-responsive img-rounded" alt="" />
+                                    <img src="images/5.png" class="img-responsive img-rounded" alt="" />
                                 </a>
                             </div>
                         </div>
@@ -190,7 +243,21 @@
                         <h3>美女相册</h3>
                         <p>点击小图片查看效果</p>
                     </div>
-                    <ul class="row small-image list-unstyled">
+                    <div class="small-image row">
+                        <a href="images/image01.jpeg" title='这是第一张图片，这里将显示第一张图片的title' class="col-md-3 col-xs-3">
+                            <img src="images/small-image01.jpeg" alt="" />
+                        </a>
+                        <a href="images/image02.jpeg" title='这是第二张图片，这里将显示第二张图片的title' class="col-md-3 col-xs-3">
+                            <img src="images/small-image02.jpeg" alt="" />
+                        </a>
+                        <a href="images/image03.jpeg" title='这是第三张图片，这里将显示第三张图片的title' class="col-md-3 col-xs-3">
+                            <img src="images/small-image03.jpeg" alt="" />
+                        </a>
+                        <a href="images/image04.jpeg" title='这是第四张图片，这里将显示第四张图片的title' class="col-md-3 col-xs-3">
+                            <img src="images/small-image04.jpeg" alt="" />
+                        </a>
+                    </div>
+<!--                     <ul class="row small-image list-unstyled">
                         <li class="item col-md-3 col-xs-3">
                             <a href="images/image01.jpeg" title='这是第一张图片，这里将显示第一张图片的title'>
                                 <img class="lazy" data-original="images/small-image01.jpeg" alt="" />
@@ -211,14 +278,14 @@
                                 <img class="lazy" data-original="images/small-image04.jpeg" alt="" />
                             </a>
                         </li>
-                        <!-- <li class="item col-md-3 col-xs-3">
+                        <li class="item col-md-3 col-xs-3">
                             <a href="images/image05.jpeg" title='这是第五张图片，这里将显示第五张图片的title'>
                                 <img class="lazy" data-original="images/small-image05.jpeg" alt="" />
                             </a>
-                        </li> -->
-                    </ul>
+                        </li>
+                    </ul> -->
                     <div class="large-image clearfix">
-                        <img class="lazy" data-original="images/image01.jpeg" alt="正在加载" />
+                        <img src="images/image01.jpeg" alt="正在加载" />
                     </div>
                     <h4 class="desc">点击任意一张小图片试试</h4>
                 </div>
@@ -249,8 +316,8 @@
                         <input type="button" name="" value="清空内容" class="btn btn-danger clear-btn" />
                         <input type="button" name="" value="添加" class="btn btn-success add-btn" />
                     </div>
-                    <table class="table table-bordered table-hover table-responsive table-striped">
-                        <!-- <caption>大学新生课程表</caption> -->
+                    <!-- <table class="table table-bordered table-hover table-responsive table-striped">
+                        <caption>大学新生课程表</caption>
                         <thead>
                             <tr>
                                 <th>课程名称</th>
@@ -280,7 +347,7 @@
                                 <td><a href="javascript:void(0);" class="delet-btn">删除</a></td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> -->
                 </div>
                 <!-- 城市选择案例 -->
                 <div class="jk-city-select" id="jkCityselect">
@@ -471,7 +538,10 @@
                         <caption>这是一个展示全选按钮的表单</caption>
                         <thead>
                             <tr>
-                                <th><input type="checkbox" class="allChecked" /></th>
+                                <th>
+                                    <input type="checkbox" class="allChecked" />&nbsp;全选
+                                    <input type="checkbox" class="cancleChecked" />&nbsp;反选
+                                </th>
                                 <th>水果名称</th>
                                 <th>价格</th>
                             </tr>
@@ -530,13 +600,12 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
             <!-- main content end -->
             <!-- sidebar start -->
             <div class="col-md-3">
                 <nav class="jk-docs-sidebar hidden-sm hidden-xs affix">
-                    <ul id="jkScrollspy" data-spy="affix" data-offset-top="260" class="nav jk-docs-sidenav">
+                    <ul id="jkScrollspy" data-spy="affix" data-offset-top="200" class="nav jk-docs-sidenav">
                         <li class="active"><a href="#jsCarousel">呼吸灯插件的封装</a></li>
                         <li><a href="#jkAccordion">手风琴插件的封装</a></li>
                         <li><a href="#jkAccordion_2">手风琴效果2</a></li>
@@ -575,11 +644,355 @@
 <!-- <script src="assets/plugin/jquery.color.min.js"></script> -->
 <script src="assets/plugin/jquery.lazyload.js"></script>
 <!-- 呼吸灯插件的引用 -->
-<script src="js/jQuery.blnCarousel.js"></script>
+<!-- <script src="js/jQuery.blnCarousel.js"></script> -->
 <!-- 手风琴1插件的引用 -->
-<script src="js/jQuery.accordion.js"></script>
+<!-- <script src="js/jQuery.accordion.js"></script> -->
 <!-- 加载main.js -->
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
+
+<script>
+
+    //定义$
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    // 设置元素之间的内容
+    function setInnerText(element,content) {
+       // 判断element是否支持innerText
+       if(typeof element.innerText === 'string') {
+           return element.innerText = content;
+       } else {
+           return element.textContent = content;
+       }
+   }
+
+
+    // 相册画廊
+    //获取所有的li元素
+
+    var jkImagegallery = document.getElementById('jkImagegallery');
+    var small_image = document.getElementsByClassName('small-image')[0];
+    var links = small_image.getElementsByTagName('a');
+    for(var i = 0;i<links.length;i++) {
+        //获取当前元素
+        var link = links[i];
+
+        //给当前的li注册点击事件
+        link.onclick = function() {
+            //切换图片和文字
+            var large_image = document.getElementsByClassName('large-image')[0].getElementsByTagName('img')[0];
+            var desc = document.getElementsByClassName('desc')[0];
+            large_image.src = this.href;
+            desc.innerText = this.title;
+            return false;
+        }
+    }
+    
+    // test 
+    var test = document.getElementById('test');
+
+    var btn_c = document.getElementById('btn');
+    var inputs = test.getElementsByTagName('input');
+    for(var i = 0;i<inputs.length;i++) {
+        if(inputs[i].type !== 'text') {
+            continue;
+        }
+        inputs[i].value = i + 1;
+    }
+
+    btn_c.onclick = function() {
+        var arr = [];
+        for(var i = 0; i<inputs.length;i++) {
+            if(inputs[i].type !== 'text') {
+                continue;
+            }
+            arr.push(inputs[i].value);
+        }
+        var str = arr.join('|');
+        console.log(str);
+    }
+
+    //随机选择
+
+    var btn_sj = document.getElementById('btn_sj');
+    btn_sj.onclick  = function() {
+        var test = document.getElementById('test');
+        var options = test.getElementsByTagName('option');
+
+        //得到一个两数之间的随机数，包括两个数在内
+
+        function getRandomIntIncIusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        //生成随机索引
+        var index = getRandomIntIncIusive(1,options.length);
+        //根据索引获取option
+        options[index].selected = true;
+    }
+
+    //切换图片
+
+    var arr_img = [
+       'images/small-image01.jpeg',
+       'images/small-image02.jpeg',
+       'images/small-image03.jpeg',
+       'images/small-image04.jpeg',
+       'images/small-image05.jpeg'
+    ];
+
+    var change_img_box = document.getElementsByClassName('change-img')[0];
+    var change_btn = change_img_box.getElementsByTagName('input')[0];
+    var change_img = change_img_box.getElementsByTagName('img')[0];
+    //记录索引
+    var index = 0;
+    change_btn.onclick = function() {
+        index ++;
+        change_img.src = arr_img[index];
+        if(index == arr_img.length - 1) {
+            index = -1;
+        }
+
+    }
+
+    //全选表单
+
+    //点击全选按钮，让子checkbox的选中状态和其一样
+    var all_select = $('jkSelectTable').getElementsByClassName('allChecked')[0];
+    //给子checkbox注册点击事件
+    //全选按钮注册点击事件 全选
+    all_select.onclick = function() {
+        var checkboxs = document.querySelectorAll('.inputCheck input[type=checkbox]');
+        // console.log(this.checked);
+        for(var i = 0;i<checkboxs.length;i++) {
+        checkboxs[i].checked = this.checked;
+      }
+    }
+    //给每一个子checkbox注册点击事件
+    var checkboxs = document.querySelectorAll('.inputCheck input[type=checkbox]');
+    for(var i = 0; i<checkboxs.length;i++) {
+        checkboxs[i].onclick = function() {
+            var isAllChecked = true;
+            for(var j = 0;j<checkboxs.length;j++) {
+                if(!checkboxs[j].checked) {
+                    isAllChecked = false;
+                    break;
+                }
+            }
+            //设置全选为选中状态
+            all_select.checked = isAllChecked;
+        }
+    }
+
+    //注册反选事件
+    var cancleChecked = document.querySelector('.cancleChecked');
+    cancleChecked.onclick = function() {
+        for(var i = 0; i<checkboxs.length;i++) {
+            checkboxs[i].checked = !checkboxs[i].checked;
+            var isAllChecked = true;
+            for(var j = 0;j<checkboxs.length;j++) {
+                if(!checkboxs[j].checked) {
+                    isAllChecked = false;
+                    break;
+                }
+            }
+            //设置全选为选中状态
+            all_select.checked = isAllChecked;
+        }
+    }
+
+    // 开关灯效果
+    var setBtn = document.querySelector('.light-box button');
+    var isOpen = true;
+    setBtn.onclick = function() {
+        var light = document.querySelector('.light');
+        if(isOpen) {
+            light.style.backgroundColor = 'black';
+            this.innerText = '开灯';
+            isOpen = false;
+        }else {
+            light.style.backgroundColor = 'white';
+            this.innerText = '关灯';
+            isOpen = true;
+        }
+    }
+    
+    //tab选项卡
+
+    // var tabs_li = document.querySelectorAll('#jkTab .tabs li');
+    //获取子元素
+    var tabs_li = document.querySelector('#jkTab .tabs').children;
+    for(var i = 0; i<tabs_li.length;i++) {
+        //设置索引
+        tabs_li[i].setAttribute('index',i);
+        //注册鼠标经过事件
+        tabs_li[i].onmouseover = function() {
+            //取消所有li的当前状态
+            for(var j = 0;j<tabs_li.length;j++) {
+                tabs_li[j].className = 'tab-item';
+            }
+            //让当前的高亮显示
+            this.className = 'tab-item active';
+
+            //找到对应索引的div显示
+            var index = this.getAttribute('index');
+            var tabs_div = document.querySelectorAll('#jkTab .products .product-item');
+            console.log(tabs_div);
+            for(var x = 0; x<tabs_div.length;x++) {
+                tabs_div[x].className = 'product-item';
+            }
+            //显示
+            tabs_div[index].className = 'product-item selected';
+        }
+    }
+
+    //动态展示列表
+
+    var search_data = [
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656},
+      {"key":"手机","qre":5656}
+
+    ];
+    //动态创建列表(在内存中)
+    var search_list = document.createElement('ul');
+    //把创建的列表放到div中
+    var jk_docs_search = document.querySelector('.jk-docs-search');
+    jk_docs_search.appendChild(search_list);
+
+    // 遍历数组 生成li
+    for(var i = 0;i<search_data.length;i++) {
+       //创建li
+       var search_li = document.createElement('li');
+       search_list.appendChild(search_li);
+       //设置li内容
+       
+       setInnerText(search_li,search_data[i].key);
+       //鼠标放在li上高亮显示
+       search_li.onmouseover = function() {
+          this.style.backgroundColor = 'lightgray';
+       }
+       search_li.onmouseout = function() {
+          this.style.backgroundColor = '';
+       }
+
+    }
+
+    //动态创建表单
+    //表单数据
+    var bodyData = [
+        {name: '高等代数', institute: '电子信息工程学院'},
+        {name: '大学英语四级', institute: '电子信息工程学院'},
+        {name: '物理与生物', institute: '电子信息工程学院'},
+        {name: '艺术认识', institute: '电子信息工程学院'}
+    ];
+    //表头数据
+    var headData = [
+        "课程名称","所属学院","操作"
+    ];
+    var jkTabdel = $('jkTabdel');
+    console.log(jkTabdel);
+    createTable(jkTabdel,headData,bodyData);
+
+    //封装动态创建表单
+     function createTable(parent,headData,bodyData) {
+        //创建表头
+        var jk_table = createHead(parent,headData);
+        //创建数据行
+        createBody(jk_table,bodyData);
+     }
+
+     //创建表头
+     function createHead(parent,headData) {
+         //创建表头
+         var jk_table = document.createElement('table');
+         jk_table.className = 'table table-bordered table-hover table-responsive table-striped';
+         parent.appendChild(jk_table);
+
+         //创建thead
+         var thead = document.createElement('thead');
+         jk_table.appendChild(thead);
+
+         //创建tr
+         var tr = document.createElement('tr');
+         thead.appendChild(tr);
+
+         //创建th
+         //遍历数组生成表头中的列
+         headData.forEach(function(item) {
+            var th = document.createElement('th');
+            tr.appendChild(th);
+            setInnerText(th,item);
+         });
+         return jk_table;
+     } 
+     //创建数据行
+
+     function createBody(jk_table,bodyData) {
+        //创建表体
+        //创建tbody
+
+        var tbody = document.createElement('tbody');
+        jk_table.appendChild(tbody);
+
+        //遍历数据
+
+        bodyData.forEach(function(item,index) {
+            //创建行
+            var tbody_tr = document.createElement('tr');
+            tbody.appendChild(tbody_tr);
+
+            //创建列
+            //遍历对象
+            for(var key in item) {
+                var tbody_td = document.createElement('td');
+                tbody_tr.appendChild(tbody_td);
+                setInnerText(tbody_td,item[key]);
+            }
+            //创建操作列
+
+            tbody_td = document.createElement('td');
+            tbody_tr.appendChild(tbody_td);
+
+            //创建删除
+            var link = document.createElement('a');
+            tbody_td.appendChild(link);
+            setInnerText(link,'删除');
+
+            //注册删除事件
+            link.onclick = linkClickDel;
+        });
+            //删除函数
+            function linkClickDel() {
+                //提示
+                var sure = confirm('删除后不可恢复，确定删除么？')
+                if(sure) {
+                    //删除
+                    //获取当前行
+                    var del_tr = this.parentNode.parentNode;
+                    tbody.removeChild(del_tr);
+                }
+            }
+     }
+
+
+
+
+
+
+</script>
 
 </body>
 </html>
