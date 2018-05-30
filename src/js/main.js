@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:20:05
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-25 15:58:02
+* @Last Modified time: 2018-05-29 15:12:28
 */
 
 // import './node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -114,7 +114,6 @@ $(function(){
         $('<tr><td>高数哈哈</td><td>电子信息工程学院</td><td><a href="javascript:void(0);" class="delet-btn">删除</a></td></tr>').appendTo($('.jk-table-del tbody'));
     });
     $('.jk-table-del .clear-btn').on('click',function(){
-        console.log('haha');
         $('.jk-table-del tbody').empty();
     });
     $('.jk-table-del tbody').on('click','.delet-btn',function(){

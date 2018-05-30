@@ -102,6 +102,38 @@
                         <li></li>
                     </ul> -->
                 </div>
+                <!-- 鼠标在盒子中的位置 -->
+                <div class="jk-box"></div>
+
+                <!-- 要求用户输入年龄 -->
+
+                <input type="text" name="" id="txt" />
+
+                <!-- 回车切换 替换成tab -->
+                <div id="inputs">
+                    <input type="text" name="" />
+                    <input type="text" name="" />
+                    <input type="text" name="" />
+                    <input type="text" name="" />
+                    <input type="text" name="" />
+                    <input type="text" name="" />
+                </div>
+                <!-- 倒计时案例 -->
+                <div class="jk-docs-countdown" id="jk_countdown">
+                    <div class="well">
+                        <h3>倒计时案例</h3>
+                    </div>
+                    <h1>距离双十一，还有</h1>
+                    <div class="time-item">
+                        <span><span class="day">00</span>天</span>
+                        <span><span class="hour">00</span>时</span>
+                        <span><span class="minute">00</span>分</span>
+                        <span><span class="second">00</span>秒</span>
+                    </div>
+                </div>
+
+
+
 
 
                  <!-- 呼吸灯效果的封装 -->
@@ -622,6 +654,7 @@
                         <li><a href="#jkMenu">下拉菜单</a></li>
                         <li><a href="#jkSelectTable">全选表单</a></li>
                         <li><a href="#jkMusicnav">音乐导航</a></li>
+                        <li><a href="#jk_countdown">倒计时案例</a></li>
                     </ul>
                 </nav>
             </div>
@@ -651,13 +684,15 @@
 <!-- <script src="js/main.js"></script> -->
 
 <script>
+    // 严格模式 规避一些不严谨的语法
+    // 'use strict'
 
     //定义$
     function $(id) {
         return document.getElementById(id);
     }
 
-    // 设置元素之间的内容
+    // 设置元素之间的内容 兼容性问题
     function setInnerText(element,content) {
        // 判断element是否支持innerText
        if(typeof element.innerText === 'string') {
@@ -666,6 +701,49 @@
            return element.textContent = content;
        }
    }
+   //注册事件，处理兼容性问题
+
+   function addEventListener(element,eventName,callback) {
+    if (element.addEventListener) {
+        element.addEventListener(eventName,callback,false);
+    } else if (element.attachEvent) {
+        element.attachEvent('on' + eventName,callback);
+    } else {
+        element['on' + eventName] = callback;
+    }
+   }
+
+   //移除事件，处理兼容性问题
+
+   function removeEventListener(element,eventName,callback) {
+    if (element.removeEventListener) {
+        element.removeEventListener(eventName,callback,false);
+    } else if (element.detachEvent) {
+        element.detachEvent('on' + eventName,callback);
+    } else {
+        element['on' + eventName] = null;
+    }
+   }
+
+   //chrome 和 ie11 兼容性问题
+   //获取页面滚动出去的距离
+
+   function getScroll() {
+       return {
+           scrollTop:document.documentElement.scrollTop || document.body.scrollTop,
+           scrollLeft:document.documentElement.scrollLeft || document.body.scrollLeft
+       }
+   }
+
+   // 获取鼠标在页面上的坐标
+
+   function getPage(e) {
+       return {
+           pageX: e.clientX + getScroll().scrollLeft,
+           pageY: e.clientY + getScroll().scrollTop
+       }
+   }
+
 
 
     // 相册画廊
@@ -987,7 +1065,144 @@
             }
      }
 
+    //城市选择案例
+    var btn_box = document.querySelector('.btn-box');
+    var src_city = document.querySelector('.src-city');
+    var tar_city = document.querySelector('.tar-city');
+    var len = src_city.children.length;
+    //1.全部向右移动
+    btn_box.children[0].onclick = function() {
+        for(var i = 0;i<len;i++) {
+            tar_city.appendChild(src_city.children[0]);
+        }
+    }
+    //2.全部向左移动
+    btn_box.children[1].onclick = function() {
+        for(var i = 0;i<len;i++) {
+            src_city.appendChild(tar_city.children[0]);
+        }
+    }
+    //3.选中的向右移动
+    btn_box.children[2].onclick = function() {
+        for(var i = 0;i<len;i++) {
+            var li = src_city.children[i];
+            // 判断li是否被选中
+            if(li.selected) {
+                tar_city.appendChild(li);
+                i --;
+            }
+        }
+    }
+    //4.选中的向左移动
+    btn_box.children[3].onclick = function() {
+        for(var i = 0;i<len;i++) {
+            var li = tar_city.children[i];
+            // 判断li是否被选中
+            if(li.selected) {
+                src_city.appendChild(li);
+                i --;
+            }
+        }
+    }
+    
+    //鼠标在盒子中的位置
+    var jk_box = document.querySelector('.jk-box');
+    // 注册鼠标移动事件
+    jk_box.onmousemove = function(e) {
+        // 鼠标在页面中的位置
 
+        var pageX = getPage(e).pageX;
+        var pageY = getPage(e).pageY;
+
+        // 计算鼠标在盒子中的位置
+
+        var x = pageX - this.offsetLeft;
+        var y = pageY - this.offsetTop;
+        console.log('x:' + x);
+        console.log('y:' + y);
+    };
+    var txt = document.getElementById('txt');
+                    // 要求用户输入年龄
+    txt.onkeydown = function(e) {
+        // 键盘码
+        console.log(e.keyCode);
+        if((e.keyCode < 48 || e.keyCode >57) && e.keyCode !== 8)  {
+            e.preventDefault();
+        } 
+    }
+
+    // 回车切换 替换成tab
+
+    var inputs = document.getElementById('inputs');
+    var input_group = inputs.querySelectorAll('input[type=text]');
+    for( var i =0; i < input_group.length;i++) {
+        input_group[i].onkeydown = textKeydown;
+    }
+    function textKeydown(e) {
+        // 当在文本框中按下回车，让下一个文本框获取焦点
+        if (e.keyCode === 13) {
+            var nextElement = this.nextElementSibling;
+            if(nextElement) {
+                nextElement.focus();
+            }
+        }
+    }
+
+    // 倒计时案例
+    // 编写一个函数，计算时间差
+
+    function getIntervalTime(startTime,endTime) {
+        var intervalTime = endTime - startTime;
+        // 转换为 天 时 分 秒
+        intervalTime /= 1000;
+
+        var day = Math.floor(intervalTime / 60 / 60 / 24);
+        var hour = Math.floor(intervalTime / 60 / 60 % 24);
+        var minute = Math.floor(intervalTime / 60 % 60);
+        var second = Math.floor(intervalTime % 60);
+
+        return {
+            day: day,
+            hour: hour,
+            minute: minute,
+            second: second
+        }
+    }
+    // 倒计时
+
+    var endTime = new Date('2018-11-11');
+    countDown();
+    setInterval(countDown, 1000);
+
+    function countDown() {
+        // 定时器 第一个参数 function 调用的时候，内部的this是window
+        // console.log(this);//window
+        // 获取当前日期
+        var startTime = new Date();
+        // 获取日期差
+
+        var countTime = getIntervalTime(startTime,endTime);
+
+        // 数值不够两位时补0
+
+        countTime.day = countTime.day < 10 ? '0' + countTime.day : countTime.day;
+        countTime.hour = countTime.hour < 10 ? '0' + countTime.hour : countTime.hour;
+        countTime.minute = countTime.minute < 10 ? '0' + countTime.minute : countTime.minute;
+        countTime.second = countTime.second < 10 ? '0' + countTime.second : countTime.second;
+
+        var jk_docs_countdown = document.querySelector('.jk-docs-countdown');
+
+        var day = jk_docs_countdown.querySelector('.day');
+        var hour = jk_docs_countdown.querySelector('.hour');
+        var minute = jk_docs_countdown.querySelector('.minute');
+        var second = jk_docs_countdown.querySelector('.second');
+
+        // innerText 兼容性
+        setInnerText(day,countTime.day);
+        setInnerText(hour,countTime.hour);
+        setInnerText(minute,countTime.minute);
+        setInnerText(second,countTime.second);
+    }
 
 
 

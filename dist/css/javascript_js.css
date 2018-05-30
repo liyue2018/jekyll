@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-05-25 16:33:44
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-27 15:00:22
+* @Last Modified time: 2018-05-30 17:39:11
 */
 .jk-docs-imagegallery .small-image {
   margin-bottom: 1rem; }
@@ -33,3 +33,21 @@
     position: absolute;
     height: 4rem;
     background: pink; }
+
+.jk-box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #f00; }
+
+#inputs input {
+  display: block;
+  margin-top: 0.3rem;
+  border: 1px solid #f00; }
+
+.jk-docs-countdown .time-item span {
+  display: inline-block;
+  color: #fff;
+  background: #f00;
+  padding: 0.3rem 0.2rem;
+  font-weight: 500;
+  font-size: 1rem; }
