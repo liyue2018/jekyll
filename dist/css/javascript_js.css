@@ -2,8 +2,13 @@
 * @Author: liyue2018
 * @Date:   2018-05-25 16:33:44
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-30 17:39:11
+* @Last Modified time: 2018-06-02 17:26:44
 */
+.jk-docs-nav.navbar-fixed-top {
+  background: rgba(0, 0, 0, 0.3); }
+  .jk-docs-nav.navbar-fixed-top a {
+    color: #fff; }
+
 .jk-docs-imagegallery .small-image {
   margin-bottom: 1rem; }
   .jk-docs-imagegallery .small-image a {
@@ -51,3 +56,86 @@
   padding: 0.3rem 0.2rem;
   font-weight: 500;
   font-size: 1rem; }
+
+.jk-docs-drag {
+  width: 100%;
+  padding: 2rem;
+  height: 16rem;
+  margin: 3rem 0;
+  overflow: hidden;
+  background: pink; }
+  .jk-docs-drag .panel {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid #f1f1f1;
+    box-shadow: 6px 6px 4px -4px rgba(0, 0, 0, 0.5); }
+    .jk-docs-drag .panel .panel-title {
+      background: #f0f0f0;
+      padding: 0.3rem 0;
+      text-align: center; }
+
+.jk-docs-magnifier {
+  overflow: hidden; }
+  .jk-docs-magnifier .magnifier-box {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    margin: 4rem 0; }
+    .jk-docs-magnifier .magnifier-box .small-img-box {
+      position: relative;
+      height: 100%; }
+      .jk-docs-magnifier .magnifier-box .small-img-box img.small-img {
+        width: 100%;
+        height: 100%; }
+      .jk-docs-magnifier .magnifier-box .small-img-box .magnifier-mask {
+        width: 5rem;
+        height: 5rem;
+        background: rgba(255, 255, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: move;
+        display: none; }
+    .jk-docs-magnifier .magnifier-box .big-img-box {
+      width: 16rem;
+      height: 18rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      margin-left: 11rem;
+      overflow: hidden; }
+      .jk-docs-magnifier .magnifier-box .big-img-box img.big-img {
+        width: 140%;
+        height: 140%;
+        position: absolute; }
+
+.jk-docs-carousel {
+  overflow: hidden;
+  width: 848px; }
+  .jk-docs-carousel .indicators {
+    bottom: 10px; }
+    .jk-docs-carousel .indicators .item {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      line-height: 1rem;
+      text-align: center;
+      border-radius: 0;
+      background: #f1f1f1;
+      margin: 0 0.2rem;
+      cursor: posinter; }
+    .jk-docs-carousel .indicators .item.active {
+      background: rgba(255, 255, 0, 0.8); }
+  .jk-docs-carousel .sliders {
+    width: 6000px;
+    height: 340px;
+    position: relative; }
+    .jk-docs-carousel .sliders li {
+      width: 848px;
+      float: left;
+      height: 100%; }
+      .jk-docs-carousel .sliders li img {
+        width: 100%;
+        height: 100%; }

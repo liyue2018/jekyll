@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-05-22 14:38:24
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-26 11:06:03
+* @Last Modified time: 2018-06-02 17:10:47
 */
 .jk-main-content .well {
   margin-top: 2rem; }
@@ -38,9 +38,9 @@
     display: block; }
   .jk-docs-carousel .indicators {
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     left: 50%;
-    margin-left: -4rem; }
+    transform: translateX(-50%); }
     .jk-docs-carousel .indicators .item {
       display: inline-block;
       width: 0.5rem;
@@ -56,13 +56,15 @@
   height: 340px;
   overflow: hidden;
   position: relative; }
-  .slider li.item {
+  .slider li {
     position: absolute;
+    width: 100%;
+    float: left;
     height: 100%; }
-    .slider li.item img {
+    .slider li img {
       width: 100%;
       height: 100%; }
-    .slider li.item:first-child {
+    .slider li:first-child {
       display: block; }
 
 .arrow {
@@ -70,7 +72,7 @@
   .arrow span.glyphicon {
     position: absolute;
     top: 60%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     width: 2rem;
     height: 2rem;
     text-align: center;

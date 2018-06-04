@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:20:05
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-29 15:12:28
+* @Last Modified time: 2018-06-02 17:17:23
 */
 
 // import './node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -34,7 +34,7 @@ $(function(){
             $('.jk-docs-header').css('margin-top','0');
         }
         // 回到顶部
-        if($(window).scrollTop() >= 1000){
+        if($(window).scrollTop() >= 500){
             $('.go-top').stop().fadeIn(1000);
         }else{
             $('.go-top').stop().fadeOut(500);

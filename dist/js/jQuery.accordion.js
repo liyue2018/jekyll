@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-05-22 23:38:15
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-05-25 16:10:01
+* @Last Modified time: 2018-06-02 06:57:28
 */
 $(function(){
   // 手风琴效果
@@ -11,7 +11,7 @@ $(function(){
     colors = colors || [];
     width = width || 0;
     var $li = this.find('li.item');
-    console.log($li.length - 1)
+    // console.log($li.length - 1)
     var boxLength = this.width();
     var maxLength = boxLength - ($li.length) * width;
     var avgLength = boxLength / ($li.length + 1);
