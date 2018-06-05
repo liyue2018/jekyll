@@ -2,34 +2,13 @@
 * @Author: liyue2018
 * @Date:   2018-05-22 14:38:24
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-02 17:10:47
+* @Last Modified time: 2018-06-05 15:50:26
 */
 .jk-main-content .well {
   margin-top: 2rem; }
 
-.jk-docs-nav {
-  background: #fff;
-  margin-bottom: 0; }
-  .jk-docs-nav a {
-    color: #563d7c;
-    font-weight: 500; }
-  .jk-docs-nav .navbar-header .navbar-toggle {
-    border-color: #ddd; }
-    .jk-docs-nav .navbar-header .navbar-toggle .icon-bar {
-      background: #563d7c; }
-  .jk-docs-nav .navbar-collapse .navbar-nav li.active a:hover {
-    color: #463265;
-    background: #f9f9f9; }
-
 .jk-info-box {
   display: none; }
-
-.jk-docs-header {
-  background: #6f5499;
-  color: #cdbfe3;
-  padding: 4rem 0; }
-  .jk-docs-header .title {
-    color: #fff; }
 
 .jk-docs-carousel {
   position: relative;

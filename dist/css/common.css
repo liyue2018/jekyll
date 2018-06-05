@@ -3,7 +3,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:43:53
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-02 17:16:24
+* @Last Modified time: 2018-06-05 16:01:16
 */
 html {
   font-size: 16px; }
@@ -40,7 +40,7 @@ body {
 .go-top {
   position: fixed;
   bottom: 15%;
-  right: 10%;
+  right: 4%;
   display: none; }
   .go-top .go-top-btn {
     display: inline-block;
@@ -70,3 +70,24 @@ body {
   .jk-docs-sidenav li.active a {
     border-left: 2px solid #563d7c;
     color: #563d7c; }
+
+.jk-docs-nav {
+  background: #fff;
+  margin-bottom: 0; }
+  .jk-docs-nav a {
+    color: #563d7c;
+    font-weight: 500; }
+  .jk-docs-nav .navbar-header .navbar-toggle {
+    border-color: #ddd; }
+    .jk-docs-nav .navbar-header .navbar-toggle .icon-bar {
+      background: #563d7c; }
+  .jk-docs-nav .navbar-collapse .navbar-nav li.active a:hover {
+    color: #463265;
+    background: #f9f9f9; }
+
+.jk-docs-header {
+  background: #6f5499;
+  color: #cdbfe3;
+  padding: 2rem 0; }
+  .jk-docs-header .title {
+    color: #fff; }

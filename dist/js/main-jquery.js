@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:20:05
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-02 17:17:23
+* @Last Modified time: 2018-06-05 15:58:09
 */
 
 // import './node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -29,9 +29,9 @@ $(function(){
         if($(window).scrollTop() > $('.jk-docs-nav').height()){
             $('.jk-docs-nav').addClass('navbar-fixed-top').css('opacity','0.8');
             $('.jk-docs-header').css('margin-top','$(".jk-docs-nav").height + 10');
-        }else{
+        } else {
             $('.jk-docs-nav').addClass('navbar-fixed-top').css('opacity','1');
-            $('.jk-docs-header').css('margin-top','0');
+            $('.jk-docs-header').css('margin-top','50px');
         }
         // 回到顶部
         if($(window).scrollTop() >= 500){

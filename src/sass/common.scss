@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-08 16:43:53
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-02 17:16:24
+* @Last Modified time: 2018-06-05 16:01:16
 */
 
 
@@ -51,7 +51,7 @@ body{
 .go-top{
     position:fixed;
     bottom:15%;
-    right:10%;
+    right:4%;
     display:none;
     .go-top-btn{
         display:inline-block;
@@ -99,6 +99,46 @@ body{
 }
 
 
+// jk-docs-nav
+
+.jk-docs-nav{
+    background:#fff;
+    margin-bottom:0;
+    a {
+        color:#563d7c;
+        font-weight:500;
+    }
+    .navbar-header{
+        .navbar-toggle{
+            border-color:#ddd;
+            .icon-bar{
+                background:#563d7c;
+            }
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            li.active{
+                a{
+                    &:hover{
+                        color:#463265;
+                        background:#f9f9f9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//简短介绍
+.jk-docs-header{
+   background:#6f5499;
+   color:#cdbfe3;
+   padding:2rem 0;
+   .title{
+    color:#fff;
+   }
+}
 
 
 

@@ -1,0 +1,14 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-06-04 11:55:01
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-06-05 15:23:43
+*/
+.map {
+  width: 80%;
+  height: 360px;
+  background: #ccc;
+  position: relative;
+  padding: 0;
+  margin: 20px auto;
+  border-radius: 4px; }
